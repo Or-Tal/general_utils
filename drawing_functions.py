@@ -2,19 +2,15 @@ import numpy as np
 import cv2
 
 """
-===============================================================================
-====================   Functions and general description    ====================
-===============================================================================
+===========================================================================================
+=========================   Functions and general description    ==========================
+===========================================================================================
 
-mark_points(n: int, img):
-    marks n points on image (or less if 'q' was pressed)
-    :param img: image to mark pts on
-    :param n: bound num
-    :dependencies: none
+mark_points(n: int, img: np.ndarray):  marks n points on image (or less if 'q' was pressed)
 """
 
 
-def mark_points(n: int, img):
+def mark_points(n: int, img: np.ndarray):
     """
     marks n points on image (or less if 'q' was pressed)
     :param img: image to mark pts on

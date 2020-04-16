@@ -5,6 +5,31 @@ from scipy.ndimage.filters import maximum_filter
 import cv2
 
 
+"""
+===========================================================================================
+=========================   Functions and general description    ==========================
+===========================================================================================
+
+warp_image(image, homography):  
+    Warps an RGB image with a given homography + fit canvas size
+
+warp_channel(image, homography): 
+    Warps a 2D image with a given homography + fit canvas size
+
+estimate_rigid_transform(points1, points2, translation_only=False):
+    Computes rigid transforming points1 towards points2, using least squares method.
+    points1[i,:] corresponds to poins2[i,:]. In every point, the first coordinate is *x*.
+    
+non_maximum_suppression(image):
+    Finds local maximas of an image.    
+
+spread_out_corners(im, m, n, radius):
+    Splits the image im to m by n rectangles and uses harris_corner_detector on each.
+
+
+"""
+
+
 def warp_image(image, homography):
     """
     Warps an RGB image with a given homography.
