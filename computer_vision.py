@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.ndimage.morphology import generate_binary_structure
 from scipy.ndimage import label, center_of_mass, map_coordinates
-from scipy.ndimage.filters import convolve, maximum_filter
+from scipy.ndimage.filters import maximum_filter
 import cv2
 
 
